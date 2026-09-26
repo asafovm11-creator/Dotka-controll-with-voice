@@ -49,4 +49,68 @@
   _c_ - `слот три`
 
 
-**На этом всё, have fun.**
+# да
+
+**Системные требования**
+
+Операционные системы:
+
+Windows: Поддерживается полностью (Windows 10/11).
+
+Linux: Частично. Библиотека pydirectinput предназначена для управления клавиатурой и мышью и корректно работает только в Windows. На Linux управление через неё работать не будет (потребуется замена на аналоги вроде pyautogui с поддержкой X11/Wayland).
+
+Версия Python: Python 3.8 или выше.
+
+Дополнительное оборудование и сервисы:
+
+Рабочий микрофон (для записи голосовых команд).
+
+Постоянное интернет-соединение (необходимо для работы распознавания речи через Google Speech Recognition API).
+
+Системные зависимости (Linux):
+Для корректной работы библиотеки sounddevice и захвата звука через PortAudio на Linux вам может потребоваться установить системный пакет:
+
+sudo apt-get install libportaudio2
+
+
+**Установка и запуск**
+
+1. Клонирование репозитория
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+
+2. Создание и активация виртуального окружения
+
+Windows (PowerShell / CMD):
+
+python -m venv venv
+venv\Scripts\activate
+
+
+Linux (Bash):
+
+python3 -m venv venv
+source venv/bin/activate
+
+
+3. Установка зависимостей
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+
+4. Запуск программы
+
+Убедитесь, что игра Dota 2 запущена (если вы используете Windows), микрофон подключен, а затем выполните:
+
+Windows:
+
+python main.py
+
+
+Linux:
+
+python3 main.py
+
